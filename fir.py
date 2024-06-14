@@ -9,7 +9,9 @@ nyquist_freq = 0.5 * fs
 # 밴드패스 필터 파라미터 정의
 pass_band = [40, 200]  # 패스밴드 주파수 범위
 stop_band = [0, 20, 220, 500]  # 스톱밴드 주파수 범위
-
+#LPF
+#cutoff_freq_normalized = cutoff_freq / nyquist_freq
+#b = signal.firwin(num_taps, cutoff_freq_normalized)
 # 필터 계수 계산
 num_taps = 687  # 필터 길이 (계수 개수)
 pass_band_normalized = [f / nyquist_freq for f in pass_band]
